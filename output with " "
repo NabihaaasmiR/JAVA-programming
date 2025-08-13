@@ -1,0 +1,12 @@
+import java.util.*;
+import java.io.*;
+class Main {
+    void main(){
+        char c='"';
+        System.out.println(c+"Hello, Java!"+c);
+    }
+    public static void main(String[] args) {
+        Main a=new Main();
+        a.main();
+    }
+}
