@@ -1,0 +1,10 @@
+class Main {
+    void first(int n)
+{
+    System.out.println(n*n);
+}
+    public static void main(String[] args) {
+       Main obj=new Main();
+       obj.first(2);
+    }
+}
