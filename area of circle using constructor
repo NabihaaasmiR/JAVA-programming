@@ -1,0 +1,14 @@
+import java.util.*;
+class Circle {
+    Circle(int r)
+    {
+        System.out.println(2.14*r*r);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+       Circle obj=new Circle(5);
+      
+    }
+}
