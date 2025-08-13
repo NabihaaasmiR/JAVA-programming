@@ -1,0 +1,20 @@
+import java.util.*;
+class Book {
+    Book(String n)
+    {
+        System.out.println(n) ;
+    }
+    Book(int r)
+    {
+        
+        System.out.println(r);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String n=sc.nextLine();
+        int r=sc.nextInt();
+       Book obj=new Book(n);
+       Book obj1=new Book(r);      
+    }
+}
