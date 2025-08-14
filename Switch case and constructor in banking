@@ -1,0 +1,72 @@
+import java.util.*;
+class Main {
+    int balance;
+    String name;
+    Main(int balance,String name)
+    {
+       balance=5000;
+       name="one";
+       this.balance=balance;
+       this.name=name;
+    }
+    void deposit(int n)
+    {
+        balance=balance+n;
+        System.out.println("deposited:"+balance);
+    }
+    void withdraw(int m)
+    {
+        if(m>balance)
+        {
+            System.out.println("insufficient");
+        }
+        else
+        {
+            balance=balance-m;
+            System.out.println("withdraw:"+balance);
+        }
+    }
+    void show()
+    {
+        System.out.println("balance:"+balance);
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int bal=sc.nextInt();
+        String name=sc.nextLine();
+        Main obj=new Main(bal,name);
+        char input='y';
+        while(input=='y'){
+        System.out.println("Enter your choice:\n 1-deposit \n 2-withdraw \n 3-show balance \n 4-Exit");
+        int op=sc.nextInt();
+        
+        switch(op)
+        {
+            case 1:
+                {
+                    int n=sc.nextInt();
+                    obj.deposit(n);
+                    break;
+                }
+            case 2:
+                {
+                    int m=sc.nextInt();
+                    obj.withdraw(m);
+                    break;
+                }
+            case 3:
+                {
+                    obj.show();
+                    break;
+                }
+            case 4:
+                {
+                    System.out.println("Exited");
+                    break;
+                }
+        }
+        System.out.println("Continue? y/n?");
+        input=sc.next().charAt(0);
+    }
+   }
+}
