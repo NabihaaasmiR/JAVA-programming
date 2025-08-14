@@ -1,0 +1,19 @@
+import java.util.*;
+class Main extends Main1 {
+    public static void main(String[] args) {
+        Main obj=new Main();
+        obj.fun(10);
+    }
+}
+class Main1{
+    void fun(int n){
+        if(n%2==0)
+        {
+           System.out.println("Even"); 
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+}
+}
