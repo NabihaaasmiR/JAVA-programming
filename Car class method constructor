@@ -1,0 +1,34 @@
+import java.util.*;
+class Car {
+    double price;
+    String model;
+    Car(double price,String model)
+    {
+        this.price=price;
+        this.model=model;
+        System.out.println(price+" "+model);
+    }
+     
+    void discount()
+    {
+        double dis=price*0.25;
+        double res=price-dis;
+        System.out.println(res);
+    }
+    void details()
+    {
+        System.out.println("Details "+price+" "+model);
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        double a=sc.nextDouble();
+        sc.nextLine();
+        String b=sc.nextLine();
+        
+        Car obj=new Car(a,b);
+        obj.discount();
+        obj.details();
+        
+    }
+}
