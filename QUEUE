@@ -1,0 +1,52 @@
+import java.util.*;
+class Stack {
+    int stack[];
+    int n;
+    int top;
+    Stack(int n){
+        int arr[]=new int[n];
+        this.n=n;
+        top=-1;
+    }
+    void push(int data){
+        if(top==n-1){
+                System.out.println("Overflow");
+            }
+        top++;
+        stack[top]=data;
+    }
+    void pop(){
+        if(top==-1){
+            System.out.println("Underflow");
+        }
+        else{
+            top--;
+        }
+    }
+    void peek(){
+        if(top==-1){
+            System.out.println("Underflow");
+        }
+        else{
+            System.out.println(stack[top]);
+        }
+    }
+    void display(){
+        for(int i=top;i>=0;i--){
+            System.out.println(stack[i]);
+        }
+    }
+}
+
+    class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Stack obj=new Stack(5);
+        obj.push(10);
+        obj.push(9);
+        obj.pop();
+        obj.display();
+        
+        
+    }
+}
